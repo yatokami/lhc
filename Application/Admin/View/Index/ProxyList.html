@@ -1,0 +1,661 @@
+<extend name="./Application/Admin/View/layout.html" />
+<block name="css">
+<load href="__PUBLIC__/admin/bootstrap/css/bootstrap-switch.css" />
+<style type="text/css">
+    .modal-dialog {
+        width: 540px;
+        margin: 225px auto;
+    }
+</style>
+</block>
+<block name="content">
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            代理管理
+            <small>代理列表</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i>管理界面</a></li>
+            <li class="active">代理管理</li>
+            <li class="active">代理列表</li>
+        </ol>
+    </section>
+
+    <section class="content">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">代理列表</h3>
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div id="example1_filter" class="dataTables_filter">
+                                    <input id="admin_money" type="hidden" value="{$t_money}">
+                                    <button name="add_proxy" onclick="add_proxy(this, 'open_model')" class="btn btn-info" data-toggle="modal" data-target="#addProxy"><i class="fa fa-plus-square"></i> 新增代理</button>
+                                    <button onclick="window.location.reload()" class="btn btn-success"><i class="fa fa-repeat"></i> 刷新数据</button>
+                                </div>
+                            </div>
+                        </div>
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>id</th>
+                                    <th>代理账号</th>
+                                    <th>代理额度</th>
+                                    <th>代理余额</th>
+                                    <th>会员额度</th>
+                                    <th>会员余额</th>
+                                    <th>结算金额</th>
+                                    <th>代理备注</th>
+                                    <th>代理状态</th>
+                                    <th>代理操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <volist name="t_agentlist" id="list" key="id">
+                                <tr>
+	                               	<td>{$id}</td>
+	                               	<td id="t_id-{$id}">{$list.agentname}</td>
+	                               	<td id="t_summoney-{$id}">{$list.summoney}</td>
+	                               	<td id="t_money-{$id}">{$list.money}</td>
+	                               	<td>{$list.u_summoney}</td>
+	                               	<td>{$list.u_money}</td>
+	                               	<td id="t_settlemoney-{$id}">{$list.total}</td>
+	                               	<td>{$list.remark}</td>
+	                               	<td>
+                                        <if condition="$list.nulltiy eq 0">
+                               	            <input id="checkbox-{$list.agentid}" name="my-checkbox" type="checkbox" checked="checked" data-size="mini" data-on-text="启用" data-off-text="禁用" data-index={$list.agentid}>
+                                        <else />
+                                            <input id="checkbox-{$list.agentid}" name="my-checkbox" type="checkbox" data-size="mini" value="1" data-on-text="启用" data-off-text="禁用" data-index={$list.agentid}>
+                                        </if>
+									</td>
+	                               	<td>
+                                        <button name="{$list.order_id}" onclick="edit_proxy(this, 'open_model', {$id},  {$list.agentid})" class="btn btn-primary" data-toggle="modal" data-target="#EditProxy"><i class="fa fa-edit"></i>修改</button>
+                                        <button name="{$list.order_id}" onclick="recharge_proxy(this, 'open_model', {$id}, {$list.agentid})" class="btn btn-primary" data-toggle="modal" data-target="#RechargeProxy"><i class="fa fa-angle-up"></i>充值</button>
+                                        <button name="{$list.order_id}" onclick="reduce_proxy(this, 'open_model', {$id}, {$list.agentid})" class="btn btn-primary" data-toggle="modal" data-target="#ReduceProxy"><i class="fa fa-angle-down"></i>降额</button>
+                                        <button name="{$list.order_id}" onclick="settle_proxy(this, 'open_model', {$id}, {$list.agentid})" class="btn btn-primary" data-toggle="modal" data-target="#SettleProxy"><i class="fa fa-yen"></i>结算</button>
+                                        <button name="{$list.order_id}" onclick="takemoney_proxy(this, 'open_model', {$id}, {$list.agentid})" class="btn btn-primary" data-toggle="modal" data-target="#TakeMoneyProxy"><i class="fa fa-yen"></i>提现</button>
+                                        <button name="{$list.order_id}" onclick="delete_proxy(this, 'open_model', {$id}, {$list.agentid})" class="btn btn-primary" data-toggle="modal" data-target="#DeleteProxy"><i class="fa fa-yen"></i>删除</button>
+                                    </td>
+                                </tr>
+                            </volist>
+                            </tbody>
+                        </table>
+
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">
+                                    总共有 {$count} 条数据
+                                </div>
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
+                                </div>
+                                <ul class="pagination">
+                                    {$page}
+                                </ul>
+                            </div>
+                        </div>                  
+                    </div>
+                </div>
+            </div>
+            <!-- /.col -->
+          </div>
+          <!-- /.row -->
+    </section><!-- /.content -->
+
+
+    <!-- addProxy Modal -->
+        <div class="modal fade" id="addProxy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">新增代理</h4>
+              </div>
+            <form>
+            <div class="modal-body">
+                <div class="input-group">
+                    <span class="input-group-addon">可用额度： </span>
+                    <input id="add_admin_money" name="add_admin_money" type="text" class="form-control" placeholder="" readonly>
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">代理账号：  </span>
+                    <input id="add_proxy_name" name="add_proxy_name" type="text" class="form-control" placeholder="代理账户(最好使用英文或者数字, 长度在20以内)">
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">代理密码：  </span>
+                    <input id="add_proxy_pwd" name="add_proxy_pwd" type="password" class="form-control" placeholder="请输入新密码(最好使用英文或者数字, 长度在20以内)">
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">确认密码：  </span>
+                    <input id="add_confirm_pwd" name="add_confirm_pwd" type="password" class="form-control" placeholder="再次输入新密码确认">
+                </div>
+                <br>
+                
+                <div class="input-group">
+                    <span class="input-group-addon">代理额度：  </span>
+                    <input id="add_proxy_money" name="add_proxy_money" type="text" class="form-control" placeholder="¥">
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">备注信息：  </span>
+                    <input id="add_remark" name="add_remark" type="text" class="form-control" placeholder="备注信息">
+                </div>
+                <br>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="add_proxy(this, 'add_proxy')">添加</button>
+                <button type="reset" class="btn btn-default">重置</button>
+            </div>
+            </form>
+            </div>
+          </div>
+        </div>
+    <!--/. addProxy Model-->
+
+    <!-- EditProxy Modal -->
+        <div class="modal fade" id="EditProxy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">修改代理(留空的则默认原值)</h4>
+              </div>
+            <form>
+            <div class="modal-body">
+                <div class="input-group">
+                    <span class="input-group-addon">代理账号：  </span>
+                    <input id="edit_proxy_id" name="edit_proxy_id" type="hidden" class="form-control" placeholder="" readonly>
+                    <input id="edit_proxy_name" name="edit_proxy_name" type="text" class="form-control" placeholder="请代理账户" readonly>
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">代理密码：  </span>
+                    <input id="edit_proxy_pwd" name="edit_proxy_pwd" type="password" class="form-control" placeholder="请输入密码">
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">确认密码：  </span>
+                    <input id="edit_confirm_pwd" name="edit_confirm_pwd" type="password" class="form-control" placeholder="再次输入新密码确认">
+                </div>
+                <br>
+                
+                <div class="input-group">
+                    <span class="input-group-addon">代理额度：  </span>
+                    <input id="edit_proxy_summoney" name="edit_proxy_summoney" type="number" class="form-control" placeholder="代理额度">
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">备注信息：  </span>
+                    <input id="edit_remark" name="edit_remark" type="text" class="form-control" placeholder="备注信息">
+                </div>
+                <br>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="edit_proxy(this,'edit_proxy')">修改</button>
+                <button type="reset" class="btn btn-default">重置</button>
+            </div>
+            </form>
+            </div>
+          </div>
+        </div>
+    <!--/. EditProxy Model-->
+
+    <!-- RechargeProxy Modal -->
+        <div class="modal fade" id="RechargeProxy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">充值代理</h4>
+              </div>
+            <form>
+            <div class="modal-body">
+                <div class="input-group">
+                    <span class="input-group-addon">可充额度：  </span>
+                    <input id="recharge_admin_money" name="recharge_admin_money" type="text" class="form-control" placeholder="" readonly>
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">代理账号：  </span>
+                    <input id="recharge_proxy_id" name="recharge_proxy_id" type="hidden" class="form-control" placeholder="" readonly>
+                    <input id="recharge_proxy_name" name="recharge_proxy_name" type="text" class="form-control" placeholder="" readonly>
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">代理额度：  </span>
+                    <input id="recharge_proxy_summoney" name="recharge_proxy_summoney" type="text" class="form-control" placeholder="" readonly>
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">代理余额：  </span>
+                    <input id="recharge_proxy_money" name="recharge_proxy_money" type="text" class="form-control" placeholder="" readonly>
+                </div>
+                <br/>
+
+                <div class="input-group">
+                    <span class="input-group-addon">充值额度：  </span>
+                    <input id="recharge_proxy_addmoney" name="recharge_proxy_addmoney" type="text" class="form-control" placeholder="¥">
+                </div>
+                <br>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="recharge_proxy(this, 'recharge_proxy')">充值</button>
+                <button type="reset" class="btn btn-default">重置</button>
+            </div>
+            </form>
+            </div>
+          </div>
+        </div>
+    <!--/. RechargeProxy Model-->
+
+    <!-- ReduceProxy Modal -->
+        <div class="modal fade" id="ReduceProxy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">降额代理</h4>
+              </div>
+            <form>
+            <div class="modal-body">
+                <div class="input-group">
+                    <span class="input-group-addon">代理账户：  </span>
+                    <input id="reduce_proxy_name" name="reduce_proxy_name" type="text" class="form-control" placeholder="" readonly>
+                    <input id="reduce_proxy_id" name="reduce_proxy_id" type="hidden" class="form-control" placeholder="" readonly>
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">代理额度：  </span>
+                    <input id="reduce_proxy_summoney" name="reduce_proxy_summoney" type="text" class="form-control" placeholder="" readonly>
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">代理余额：  </span>
+                    <input id="reduce_proxy_money" name="reduce_proxy_money" type="text" class="form-control" placeholder="" readonly>
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">降额额度：  </span>
+                    <input id="reduce_proxy_reducemoney" name="reduce_proxy_reducemoney" type="text" class="form-control" placeholder="¥">
+                </div>
+                <br>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="reduce_proxy(this, 'reduce_proxy')">降额</button>
+                <button type="reset" class="btn btn-default">重置</button>
+            </div>
+            </form>
+            </div>
+          </div>
+        </div>
+    <!--/. ReduceProxy Model-->
+
+    <!-- SettleProxy Modal -->
+        <div class="modal fade" id="SettleProxy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">结算代理</h4>
+              </div>
+            <form>
+            <div class="modal-body">
+                <div class="input-group">
+                    <span class="input-group-addon">代理账户：  </span>
+                    <input id="settle_proxy_name" name="settle_proxy_name" type="text" class="form-control" placeholder="" readonly>
+                    <input id="settle_proxy_id" name="settle_proxy_id" type="hidden" class="form-control" placeholder="" readonly>
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">代理额度：  </span>
+                    <input id="settle_proxy_summoney" name="settle_proxy_summoney" type="text" class="form-control" placeholder="" readonly>
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">代理余额：  </span>
+                    <input id="settle_proxy_money" name="settle_proxy_money" type="text" class="form-control" placeholder="" readonly>
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">结算金额：  </span>
+                    <input id="settle_proxy_settlemoney" name="settle_proxy_settlemoney" type="number" class="form-control" placeholder="¥" readonly>
+                    <input id="settle_proxy_hiddenmoney" name="settle_proxy_hiddenmoney" type="hidden" class="form-control" placeholder="¥" readonly>
+                </div>
+                <br>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="settle_proxy(this, 'settle_proxy')">结算</button>
+                <button type="reset" class="btn btn-default">重置</button>
+            </div>
+            </form>
+            </div>
+          </div>
+        </div>
+    <!--/. SettleProxy Model-->
+
+    <!-- TakeMoneyProxy Modal -->
+        <div class="modal fade" id="TakeMoneyProxy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">提现代理</h4>
+              </div>
+            <form>
+            <div class="modal-body">
+                <div class="input-group">
+                    <span class="input-group-addon">代理账户：  </span>
+                    <input id="take_proxy_name" name="take_proxy_name" type="text" class="form-control" placeholder="" readonly>
+                    <input id="take_proxy_id" name="take_proxy_id" type="hidden" class="form-control" placeholder="" readonly>
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon">代理余额：  </span>
+                    <input id="take_proxy_money" name="take_proxy_money" type="text" class="form-control" readonly>
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon">结算金额：  </span>
+                    <input id="take_proxy_settlemoney" name="take_proxy_settlemoney" type="number" class="form-control" readonly>
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon">提现金额：  </span>
+                    <input id="take_proxy_takemoney" name="take_proxy_takemoney" type="number" class="form-control" placeholder="¥">
+                </div>
+                <br>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="takemoney_proxy(this, 'takemoney_proxy')">提现</button>
+                <button type="reset" class="btn btn-default">重置</button>
+            </div>
+            </form>
+            </div>
+          </div>
+        </div>
+    <!--/. TakeMoneyProxy Model-->
+
+    <!-- DeleteProxy Modal -->
+        <div class="modal fade" id="DeleteProxy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">删除代理</h4>
+              </div>
+            <form>
+            <div class="modal-body">
+                <div class="input-group">
+                    <span class="input-group-addon">确认密码：  </span>
+                    <input id="delete_proxy_pwd" name="delete_proxy_pwd" type="password" class="form-control" placeholder="代理密码">
+                    <input id="delete_proxy_id" name="delete_proxy_id" type="hidden" class="form-control" placeholder="" readonly>
+                </div>
+                <br>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="delete_proxy(this, 'delete_proxy')">删除</button>
+                <button type="reset" class="btn btn-default">重置</button>
+            </div>
+            </form>
+            </div>
+          </div>
+        </div>
+    <!--/. DeleteProxy Model-->
+</div>
+</block>
+
+
+<block name="script">
+<load href="__PUBLIC__/admin/bootstrap/js/bootstrap-switch.min.js" />
+
+<script>
+	$("[name='my-checkbox']").bootstrapSwitch();
+</script>
+
+<script>
+
+    $(function() {
+        $("[name='my-checkbox']").on('switchChange.bootstrapSwitch', function (e, cbool) {
+            var state = 1;
+            var status = "禁用";
+            if(cbool) {
+                var state = 0;
+                var status = "启用";
+            }
+            var bool = confirm("是否确认" + status);
+            var data = {};
+            if(bool) {
+                data.state = state;
+                data.t_id = $(e.target).attr('data-index');
+                ajax_data(data, "{:U('Proxy/switch_proxy')}", cbool, this);
+            } else {
+                $(this).bootstrapSwitch('state', !cbool, true)
+            }
+            
+        });
+    })
+
+//删除代理
+function delete_proxy(obj, str, id, t_id) {
+    if(str == "delete_proxy") {
+            if("" != $("#delete_proxy_pwd").val()) {
+                var data = {
+                    "action" : "delete",
+                    "t_id": $("#delete_proxy_id").val(),
+                    "proxy_pwd": $("#delete_proxy_pwd").val(),
+                }
+                ajax_data(data, "{:U('Proxy/delete_proxy')}");
+            } else {
+                alert("确认密码不能为空");
+            }     
+       
+    } 
+    if(str == "open_model") {
+        $("#delete_proxy_id").val(t_id);
+    }
+}
+
+//代理提现
+function takemoney_proxy(obj, str, id, t_id) {
+    if(str == "takemoney_proxy") {
+            if(0 <= parseFloat($("#take_proxy_settlemoney").val())) {
+                var data = {
+                    "action" : "take",
+                    "t_id": $("#take_proxy_id").val(),
+                    "proxy_name": $("#take_proxy_name").val(),
+                    "proxy_takemoney": $("#take_proxy_takemoney").val(),
+                }
+                ajax_data(data, "{:U('Proxy/takemoney_proxy')}");
+            } else {
+                alert("金额不足提现");
+            }     
+       
+    } 
+    if(str == "open_model") {
+        $("#take_proxy_name").val($("#t_id-"+id).text());
+        $("#take_proxy_id").val(t_id);
+        $("#take_proxy_money").val($("#t_money-"+id).text());
+        $("#take_proxy_settlemoney").val($("#t_settlemoney-"+id).text());
+    }
+} 
+
+//代理结算
+function settle_proxy(obj, str, id, t_id) {
+    if(str == "settle_proxy") {
+        var data = {
+            "action" : "settle",
+            "t_id": $("#settle_proxy_id").val(),
+            "proxy_name": $("#settle_proxy_name").val(),
+        }
+        ajax_data(data, "{:U('Proxy/settle_proxy')}");
+       
+    } 
+    if(str == "open_model") {
+        $("#settle_proxy_name").val($("#t_id-"+id).text());
+        $("#settle_proxy_id").val(t_id);
+        $("#settle_proxy_summoney").val($("#t_summoney-"+id).text());
+        $("#settle_proxy_money").val($("#t_money-"+id).text());
+        $("#settle_proxy_settlemoney").val($("#t_settlemoney-"+id).text());
+        $("#settle_proxy_hiddenmoney").val($("#t_settlemoney-"+id).text());
+    }
+}
+
+
+
+//代理降额
+function reduce_proxy(obj, str, id, t_id) {
+    if(str == "reduce_proxy") {
+        if(parseFloat($("#reduce_proxy_money").val()) >= parseFloat($("#reduce_proxy_reducemoney").val())) {
+            var data = {
+                "action" : "reduce",
+                "t_id": $("#reduce_proxy_id").val(),
+                "proxy_name": $("#reduce_proxy_name").val(),
+                "proxy_reducemoney": $("#reduce_proxy_reducemoney").val(),
+            }
+            ajax_data(data, "{:U('Proxy/reduce_proxy')}");
+        } else {
+            alert("削减额度超额");
+        }
+    } 
+    if(str == "open_model") {
+        $("#reduce_proxy_name").val($("#t_id-"+id).text());
+        $("#reduce_proxy_id").val(t_id);
+        $("#reduce_proxy_summoney").val($("#t_summoney-"+id).text());
+        $("#reduce_proxy_money").val($("#t_money-"+id).text())
+    }
+}
+
+//充值代理
+function recharge_proxy(obj, str, id, t_id) {
+    if(str == "recharge_proxy") {
+        if(parseFloat($("#recharge_admin_money").val()) >= parseFloat($("#recharge_proxy_addmoney").val())) {
+            var data = {
+                "action" : "recharge",
+                "t_id": $("#recharge_proxy_id").val(),
+                "proxy_name": $("#recharge_proxy_name").val(),
+                "proxy_addmoney": $("#recharge_proxy_addmoney").val(),
+            }
+
+            ajax_data(data, "{:U('Proxy/recharge_proxy')}");
+        } else {
+            alert("充值额度不足");
+        }
+    } 
+    if(str == "open_model") {
+        $("#recharge_admin_money").val($("#admin_money").val());
+        $("#recharge_proxy_name").val($("#t_id-"+id).text());
+        $("#recharge_proxy_id").val(t_id);
+        $("#recharge_proxy_summoney").val($("#t_summoney-"+id).text());
+        $("#recharge_proxy_money").val($("#t_money-"+id).text())
+    }
+}
+
+
+//修改代理
+function edit_proxy(obj, str, id, t_id) {
+    if(str == "edit_proxy") {
+        if($("#edit_proxy_pwd").val() == $("#edit_confirm_pwd").val()) {
+            var data = {
+                "action" : "edit",
+                "t_id": $("#edit_proxy_id").val(),
+                "proxy_name": $("#edit_proxy_name").val(),
+                "proxy_pwd": $("#edit_proxy_pwd").val(),
+                "proxy_summoney": $("#edit_proxy_summoney").val(), 
+                "proxy_remark": $("#edit_remark").val(),
+            }
+            ajax_data(data, "{:U('Proxy/edit_proxy')}");
+        } else {
+            alert("两次输入密码不同");
+        }
+    } 
+    if(str == "open_model") {
+        $("#edit_proxy_name").val($("#t_id-"+id).text());
+        $("#edit_proxy_id").val(t_id);
+    }
+
+}
+
+
+
+//新增代理
+function add_proxy(obj, str) {
+    if(str == "add_proxy") {
+        if($("#add_proxy_pwd").val() == $("#add_confirm_pwd").val()) {
+            var data = {
+                "action" : "add",
+                "proxy_name": $("#add_proxy_name").val(),
+                "proxy_pwd": $("#add_proxy_pwd").val(),
+                "proxy_remark": $("#add_remark").val(),
+                "proxy_money": $("#add_proxy_money").val(),
+            }
+
+            ajax_data(data, "{:U('Proxy/add_proxy')}");
+        } else {
+            alert("两次输入密码不同");
+        }
+    }
+
+    if(str == "open_model") {
+        $("#add_admin_money").val($("#admin_money").val());
+    }
+}
+
+
+function ajax_data(data, url, cbool, obj) {
+    $.ajax({
+        type: 'post',
+        url: url,
+        data: data,
+        success: function (data) {
+            if(data > 0) {
+                alert('操作成功');
+                location.reload();
+            } else if (data == -1) {
+                alert('额度不足');
+            } else if (data == -3) {
+                alert('用户已存在');
+            } else if (data == -4) {
+                alert('操作失败');
+                $(obj).bootstrapSwitch('state', !cbool, true)
+            } else if (data == -6) {
+                alert('操作成功');
+            } else if (data == -5) {
+                alert('该代理额度已分配大过设定额度，请重新设置');
+            } else {
+                alert('操作失败');
+            }
+            
+        },
+        error: function (data, status) {
+           alert('操作时出现异常')
+        }
+    });
+}
+</script>
+</block>

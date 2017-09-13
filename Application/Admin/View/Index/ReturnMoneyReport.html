@@ -1,0 +1,132 @@
+<extend name="./Application/Admin/View/layout.html" />
+
+<block name="content">
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            账单报表
+            <small>统计报表</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i>管理界面</a></li>
+            <li class="active">账单报表</li>
+            <li class="active">统计报表</li>
+        </ol>
+    </section>
+
+    <section class="content">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">统计报表</h3>
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="row">
+                            <form action="{:U('ReturnMoneyReport/rmreport')}" method="get">
+                                <div class="col-sm-6">
+                                    <div id="example1_filter" class="dataTables_filter">
+                                        <label>搜索日期:
+                                        <input class="Wdate form-control input-sm"  name="stime" type="text"  onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="{$stime}">
+                                        </label>
+                                        <label>--</label>
+                                        <label>
+                                        <input class="Wdate form-control input-sm" name="etime" type="text" onClick="WdatePicker({el:this,dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="{$etime}">
+                                        </label>
+                                        <label>搜索会员:<input id="username" name="agentname" type="search" class="form-control input-sm" aria-controls="example1" placeholder="请输入会员账号" value="{$user_name}"></label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-1">
+                                    <div id="example1_filter" class="dataTables_filter">
+                                        <button id="search" type="submit" class="btn btn-block btn-info" style="width:70px;">搜索</button>   
+                                    </div>
+                                </div>           
+                            </form>
+                                <div class="col-sm-1">
+                                    <div id="example1_filter" class="dataTables_filter">
+                                        <button onclick="window.location.reload()" class="btn btn-success"><i class="fa fa-repeat"></i>刷新数据</button>  
+                                    </div>
+                                </div>
+                        </div>
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>id</th>
+                                    <th>会员账号</th>
+                                    <th>会员额度</th>
+                                    <th>会员余额</th>
+                                    <th>输赢金钱</th>
+                                    <th>总下注额度</th>
+                                    <th>抽水比例</th>
+                                    <th>抽水</th>
+                                    <th>收入</th>
+                                    <th>占成比例</th>
+                                    <th>占成后收入</th>
+                                    <th>充值</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <volist name="t_betlist" id="list" key="id">
+                                <tr>
+                                	<td>{$id}</td>
+                                	<td>{$list.username}</td>
+                                	<td>{$list.summoney}</td>
+                                    <td>{$list.money}</td>
+                                    <td>{$list.sprofit}</td>
+                                    <td>{$list.sbetmoney}</td>
+                                    <td>{$list.fs}%</td>
+                                    <td>{$list.fsmoney}</td>
+                                    <td>{$list.income}</td>
+                                    <td>{$list.zc}%</td>
+                                    <td>{$list.zcmoney}</td>
+                                    <td>{$list.omoney}</td>
+                                </tr>
+                            </volist>
+                                <tr style="color: #ff3d00;">
+                                    <td>总计:</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>{$st_betlist.ssprofit}</td>
+                                    <td>{$st_betlist.ssbetmoney}</td>
+                                    <td></td>
+                                    <td>{$st_betlist.sfsmoney}</td>
+                                    <td>{$st_betlist.sincome}</td>
+                                    <td></td>
+                                    <td>{$st_betlist.szcmoney}</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">
+                                    总共有 {$count} 条数据
+                                </div>
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
+                                </div>
+                                <ul class="pagination">
+                                    {$page}
+                                </ul>
+                            </div>
+                        </div>                  
+                    </div>
+                </div>
+            </div>
+            <!-- /.col -->
+          </div>
+          <!-- /.row -->
+    </section><!-- /.content -->
+
+</div>
+</block>
+
+
+<block name="script">
+<script language="javascript" type="text/javascript" src="__PUBLIC__/My97DatePicker/WdatePicker.js"></script>
+</block>

@@ -1,0 +1,83 @@
+<extend name="./Application/Admin/View/layout.html" />
+
+<block name="content">
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            个人面板
+            <small>修改密码</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i>管理界面</a></li>
+            <li class="active">个人面板</li>
+            <li class="active">修改密码</li>
+        </ol>
+    </section>
+
+    <section class="content">
+     	<div class="row">
+     		<div class="col-md-12">
+	            <form method="post" action="{:U('UserPanel/updatePwd')}" onsubmit="return confirm_update()">
+     			<div class="box box-info">
+		            <div class="box-header with-border">
+		              <h3 class="box-title">修改密码</h3>
+		            </div>
+		            <div class="box-body">
+
+			            <div class="input-group">
+			                <span class="input-group-addon">用户名： </span>
+			                <input id="admin_name" name="admin_name" type="text" class="form-control" placeholder="{$t_agentinfo.agentname}" readonly>
+		              	</div>
+		                <br>
+
+			            <div class="input-group">
+			                <span class="input-group-addon">原密码：  </span>
+			                <input id="old_pwd" name="old_pwd" type="password" class="form-control" placeholder="请输入原密码">
+			            </div>
+			            <br>
+
+		                <div class="input-group">
+			                <span class="input-group-addon">新密码：  </span>
+			                <input id="new_pwd" name="new_pwd" type="password" class="form-control" placeholder="请输入新密码">
+			            </div>
+		              	<br>
+
+		              	<div class="input-group">
+			                <span class="input-group-addon">新密码：  </span>
+			                <input id="confirm_new_pwd" type="password" class="form-control" placeholder="再次输入新密码确认">
+			            </div>
+		              	<br>
+		              
+		              <!-- /input-group -->
+		            </div>
+		            <div class="box-footer">
+                		<button type="submit" class="btn btn-primary">修改</button>
+                		<input type="reset" class="btn btn-primary"></input>
+              		</div>
+	            <!-- /.box-body -->
+     			</div>
+     			</form>
+         		<!-- /.box-info -->
+     		</div>	
+     	</div>
+    </section>
+</div>
+</block>
+
+
+<block name="script">
+<script type="text/javascript">
+	function confirm_update() {
+		var new_pwd = $('#new_pwd').val();
+		var confirm_new_pwd = $('#confirm_new_pwd').val();
+
+		if(new_pwd == confirm_new_pwd) {
+			return true;
+		} else {
+			alert('两次输入新密码不同');
+			return false;
+		}
+	}
+</script>
+</block>

@@ -1,0 +1,181 @@
+<extend name="./Application/Admin/View/layout.html" />
+
+<block name="content">
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            后台首页
+            <small>后台面板</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i>管理界面</a></li>
+            <li class="active">后台首页</li>
+        </ol>
+    </section>
+
+     <section class="content">
+         <!-- Small boxes (Stat box) -->
+      <div class="row">
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-aqua">
+            <div class="inner">
+              <h3>{$info.acount}</h3>
+
+              <p>会员人数</p>
+            </div>
+            <div class="icon">
+               <i class="ion ion-person-add"></i>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-green">
+            <div class="inner">
+              <h3>{$info.summoney}<sup style="font-size: 20px"></sup></h3>
+
+              <p>会员总额度</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-social-usd"></i>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-yellow">
+            <div class="inner">
+              <h3>{$info.money}</h3>
+
+              <p>会员余额</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-social-euro"></i>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-red">
+            <div class="inner">
+              <h3>{$info.total}</h3>
+
+              <p>结算金额</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-social-yen"></i>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <!-- ./col -->
+      </div>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">登陆日志</h3>
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>id</th>
+                                    <th>登陆IP</th>
+                                    <th>登陆时间</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <volist name="t_agentlog" id="alog" key="k">
+                                    <tr>
+                                      <td>{$k}</td>
+                                      <td>{$alog.loginip}</td>
+                                      <td>{$alog.logintime|date="y-m-d h:i:s",###}</td>
+                                    </tr>
+                                </volist>
+                            </tbody>
+                        </table>                  
+                    </div>
+                </div>
+            </div>
+            <!-- /.col -->
+
+            <div class="col-xs-6">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">操作日志(只显示最近5条)</h3>
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>id</th>
+                                    <th>操作会员</th>
+                                    <th>操作类型</th>
+                                    <th>操作额度</th>
+                                    <th>操作时间</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                               <volist name="t_operatelog" id="olog" key="k">
+                                    <tr>
+                                      <td>{$k}</td>
+                                      <td>{$olog.operateusername}</td>
+                                      <td>{$olog.operatetype}</td>
+                                      <td>{$olog.operatemoney}</td>
+                                      <td>{$olog.time|date="y-m-d h:i:s",###}</td>
+                                    </tr>
+                                </volist>
+                            </tbody>
+                        </table>                  
+                        </div>
+                </div>
+            </div>
+            <!-- /.col -->
+        </div>
+       <div class="row">
+            <div class="col-xs-6">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">网站公告</h3>
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>id</th>
+                                    <th>公告内容</th>
+                                    <th>发布时间</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <volist name="t_bulletin" id="item" key="k">
+                                    <tr>
+                                      <td>{$k}</td>
+                                      <td>{$item.bulletin}</td>
+                                      <td>{$item.time|date="Y-m-d H:i:s",###}</td>
+                                    </tr>
+                                </volist>
+                            </tbody>
+                        </table>                  
+                    </div>
+                </div>
+            </div>
+            <!-- /.col -->
+        </div>
+
+    </section><!-- /.content -->
+</div>
+</block>
+
+<block name="script">
+
+</block>

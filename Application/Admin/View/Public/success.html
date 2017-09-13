@@ -1,0 +1,38 @@
+<?php
+    if(C('LAYOUT_ON')) {
+        echo '{__NOLAYOUT__}';
+    }
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>loading</title>
+	<style>
+		*{margin: 0; padding: 0; border:0;}
+		body{padding-top: 50px;background: #929292;}
+		.center{width: 500px;margin:0 auto;text-align: center;}
+		.center img{width: 80%;height: auto; margin-bottom: 15px;}
+		.center p{font-size: 18px; color: #fff;text-shadow: 2px 2px 1px #292929;}
+	</style>
+</head>
+<body>
+	<div class="center">
+		<img src="__PUBLIC__/assets/img/load.png" alt="">
+		<p><?php echo($message); ?>页面自动 <a id="href" href="<?php echo($jumpUrl); ?>">跳转</a> 等待时间： <b id="wait"><?php echo($waitSecond); ?></p>
+	</div>
+	
+</body>
+<script type="text/javascript">
+(function(){
+var wait = document.getElementById('wait'),href = document.getElementById('href').href;
+var interval = setInterval(function(){
+	var time = --wait.innerHTML;
+	if(time <= 0) {
+		location.href = href;
+		clearInterval(interval);
+	};
+}, 1000);
+})();
+</script>
+</html>

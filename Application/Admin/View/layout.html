@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>后台管理界面</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <load href="__PUBLIC__/admin/bootstrap/css/bootstrap.min.css" />
+    <load href="__PUBLIC__/content/css/font-awesome.min.css" />
+    <load href="__PUBLIC__/content/css/ionicons.min.css" />
+    <load href="__PUBLIC__/admin/dist/css/AdminLTE.css" />
+    <load href="__PUBLIC__/admin/dist/css/skins/skin-blue.min.css" />
+    <block name="css"></block>
+
+   
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+        <include file="./Application/Admin/View/header.html" />
+        <include file="./Application/Admin/View/left.html" />
+        <block name="content"></block>
+    </div>
+
+    <load href="__PUBLIC__/admin/plugins/jQuery/jQuery-2.1.4.min.js" />
+    <load href="__PUBLIC__/admin/bootstrap/js/bootstrap.min.js" />
+    <load href="__PUBLIC__/admin/dist/js/app.min.js" />
+    <load href="__PUBLIC__/admin/plugins/datatables/jquery.dataTables.min.js" />
+    <load href="__PUBLIC__/admin/plugins/datatables/dataTables.bootstrap.min.js" />
+    <load href="__PUBLIC__/admin/plugins/slimScroll/jquery.slimscroll.min.js" />
+    <load href="__PUBLIC__/admin/plugins/fastclick/fastclick.min.js" />
+    <load href="__PUBLIC__/admin/dist/js/demo.js" />
+    <block name="script"></block>
+
+    <!-- Optionally, you can add Slimscroll and FastClick plugins.
+         Both of these plugins are recommended to enhance the
+         user experience. Slimscroll is required when using the
+         fixed layout. -->
+
+</body>
+</html>

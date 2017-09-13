@@ -1,0 +1,766 @@
+[ 2017-09-13T01:32:25+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:25+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-13T01:32:27+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:27+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:29+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:29+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-09-13T01:32:31+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:31+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:33+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:33+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:35+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:35+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:37+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:37+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:39+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:39+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:41+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:41+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:43+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:43+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] session_start(): ps_files_cleanup_dir: opendir(C:\Windows\Temp\) failed: Result too large (34) D:\testWWW\lhc2\ThinkPHP\Common\functions.php 第 1263 行.
+
+[ 2017-09-13T01:32:45+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:45+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:47+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:48+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:50+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:50+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:52+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:52+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:54+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:54+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:56+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:56+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:58+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:32:58+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:33:00+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:33:00+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:33:02+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:33:02+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:33:04+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:33:04+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:33:06+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:33:06+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:33:08+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:33:08+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:33:10+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:33:10+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:33:12+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:33:12+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-13T01:33:14+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:33:14+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:33:16+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:33:16+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:33:18+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:33:18+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:33:20+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T01:33:20+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T02:50:17+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T02:50:17+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T02:50:19+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T02:50:19+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T02:50:19+08:00 ] 192.168.0.10 /Index2/auto_compltion
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `t_history` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913001' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913002' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913003' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913004' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913005' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913006' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913007' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913008' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913009' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913010' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913011' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913012' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913013' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913014' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913015' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913016' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913017' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913018' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913019' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913020' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913021' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913022' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913023' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913024' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913025' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913026' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913027' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913028' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913029' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913030' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913031' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913032' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913033' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913034' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913035' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913036' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913037' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913038' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913039' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913040' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913041' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913042' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913043' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913044' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913045' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913046' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913047' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913048' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913049' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913050' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913051' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913052' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913053' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913054' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913055' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913056' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913057' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913058' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913059' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913060' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913061' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913062' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913063' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913064' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913065' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913066' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913067' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913068' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913069' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913070' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913071' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913072' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913073' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913074' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913075' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913076' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913077' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913078' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913079' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913080' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913081' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913082' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913083' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913084' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913085' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913086' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913087' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913088' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913089' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913090' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913091' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913092' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913093' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913094' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913095' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913096' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913097' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913098' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913099' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913100' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913101' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913102' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913103' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_history` WHERE `State` = 2  [ RunTime:0.0000s ]
+SQL: UPDATE `t_history` SET `Issue`='20170913001',`Time`='1505242219',`Num`='猪--龙--猴--蛇--牛--猪--龙:11--06--02--17--09--35--30',`TNumUrl`='30',`TAnimalUrl`='龙',`TColor`='red',`TAnimalTypeUrl`='ys',`TBigUrl`='1',`TDanshuangUrl`='0' WHERE `Issue` = '20170913001' [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913001' AND `State` IN ('0','1') LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `t_history` SET `Issue`='20170913002',`Time`='1505242219',`Num`='龙--猴--鸡--猪--兔--鼠--猪:42--14--37--35--19--46--47',`TNumUrl`='47',`TAnimalUrl`='猪',`TColor`='blue',`TAnimalTypeUrl`='jq',`TBigUrl`='1',`TDanshuangUrl`='1' WHERE `Issue` = '20170913002' [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913002' AND `State` IN ('0','1') LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `t_history` SET `Issue`='20170913003',`Time`='1505242219',`Num`='马--蛇--虎--牛--猪--兔--鸡:40--41--32--21--47--31--49',`TNumUrl`='49',`TAnimalUrl`='鸡',`TColor`='green',`TAnimalTypeUrl`='jq',`TDanshuangUrl`='-1',`TBigUrl`='-1' WHERE `Issue` = '20170913003' [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913003' AND `State` IN ('0','1') LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `t_history` SET `Issue`='20170913004',`Time`='1505242219',`Num`='鸡--狗--鼠--鼠--虎--狗--兔:13--12--34--10--32--36--19',`TNumUrl`='19',`TAnimalUrl`='兔',`TColor`='red',`TAnimalTypeUrl`='ys',`TBigUrl`='0',`TDanshuangUrl`='1' WHERE `Issue` = '20170913004' [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913004' AND `State` IN ('0','1') LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `t_history` SET `Issue`='20170913005',`Time`='1505242219',`Num`='蛇--兔--虎--猴--狗--蛇--蛇:41--07--20--38--48--17--29',`TNumUrl`='29',`TAnimalUrl`='蛇',`TColor`='red',`TAnimalTypeUrl`='ys',`TBigUrl`='1',`TDanshuangUrl`='1' WHERE `Issue` = '20170913005' [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913005' AND `State` IN ('0','1') LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `t_history` SET `Issue`='20170913006',`Time`='1505242219',`Num`='兔--鼠--兔--鼠--鸡--马--鼠:07--22--31--34--13--04--46',`TNumUrl`='46',`TAnimalUrl`='鼠',`TColor`='red',`TAnimalTypeUrl`='ys',`TBigUrl`='1',`TDanshuangUrl`='0' WHERE `Issue` = '20170913006' [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913006' AND `State` IN ('0','1') LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `t_history` SET `Issue`='20170913007',`Time`='1505242219',`Num`='猴--蛇--牛--鸡--牛--猪--牛:38--41--45--01--33--35--09',`TNumUrl`='9',`TAnimalUrl`='牛',`TColor`='blue',`TAnimalTypeUrl`='jq',`TBigUrl`='0',`TDanshuangUrl`='1' WHERE `Issue` = '20170913007' [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913007' AND `State` IN ('0','1') LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `t_history` SET `Issue`='20170913008',`Time`='1505242219',`Num`='猴--马--马--猴--龙--鼠--鸡:14--40--04--02--30--22--25',`TNumUrl`='25',`TAnimalUrl`='鸡',`TColor`='blue',`TAnimalTypeUrl`='jq',`TBigUrl`='1',`TDanshuangUrl`='1' WHERE `Issue` = '20170913008' [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913008' AND `State` IN ('0','1') LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `t_history` SET `Issue`='20170913009',`Time`='1505242219',`Num`='龙--马--蛇--猪--虎--龙--鸡:30--04--17--11--32--06--13',`TNumUrl`='13',`TAnimalUrl`='鸡',`TColor`='red',`TAnimalTypeUrl`='jq',`TBigUrl`='0',`TDanshuangUrl`='1' WHERE `Issue` = '20170913009' [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913009' AND `State` IN ('0','1') LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `t_history` SET `Issue`='20170913010',`Time`='1505242219',`Num`='蛇--猪--兔--猪--虎--猴--牛:29--11--31--47--32--14--21',`TNumUrl`='21',`TAnimalUrl`='牛',`TColor`='green',`TAnimalTypeUrl`='jq',`TBigUrl`='0',`TDanshuangUrl`='1' WHERE `Issue` = '20170913010' [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913010' AND `State` IN ('0','1') LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `t_history` SET `State`='3' WHERE `Issue` = '20170913010' [ RunTime:0.0000s ]
+SQL: UPDATE `t_history` SET `Issue`='20170913011',`Time`='1505242219',`Num`='狗--蛇--猪--蛇--狗--羊--羊:48--29--47--05--24--39--03',`TNumUrl`='3',`TAnimalUrl`='羊',`TColor`='blue',`TAnimalTypeUrl`='jq',`TBigUrl`='0',`TDanshuangUrl`='1' WHERE `Issue` = '20170913011' [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913011' AND `State` IN ('0','1') LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `t_history` SET `State`='3' WHERE `Issue` = '20170913011' [ RunTime:0.0010s ]
+SQL: UPDATE `t_history` SET `Issue`='20170913012',`Time`='1505242219',`Num`='马--猪--猪--虎--龙--猴--虎:16--11--35--44--30--26--32',`TNumUrl`='32',`TAnimalUrl`='虎',`TColor`='green',`TAnimalTypeUrl`='ys',`TBigUrl`='1',`TDanshuangUrl`='0' WHERE `Issue` = '20170913012' [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913012' AND `State` IN ('0','1') LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `t_history` SET `State`='3' WHERE `Issue` = '20170913012' [ RunTime:0.0000s ]
+SQL: UPDATE `t_history` SET `Issue`='20170913013',`Time`='1505242219',`Num`='鼠--兔--马--狗--虎--鼠--虎:10--19--28--36--08--22--32',`TNumUrl`='32',`TAnimalUrl`='虎',`TColor`='green',`TAnimalTypeUrl`='ys',`TBigUrl`='1',`TDanshuangUrl`='0' WHERE `Issue` = '20170913013' [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913013' AND `State` IN ('0','1') LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `t_history` SET `State`='3' WHERE `Issue` = '20170913013' [ RunTime:0.0010s ]
+SQL: UPDATE `t_history` SET `Issue`='20170913014',`Time`='1505242219',`Num`='牛--虎--猴--鸡--马--马--鸡:09--08--38--01--04--40--25',`TNumUrl`='25',`TAnimalUrl`='鸡',`TColor`='blue',`TAnimalTypeUrl`='jq',`TBigUrl`='1',`TDanshuangUrl`='1' WHERE `Issue` = '20170913014' [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913014' AND `State` IN ('0','1') LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `t_history` SET `State`='3' WHERE `Issue` = '20170913014' [ RunTime:0.0000s ]
+SQL: UPDATE `t_history` SET `Issue`='20170913015',`Time`='1505242219',`Num`='羊--狗--猪--鸡--龙--鸡--猴:15--48--23--37--18--49--14',`TNumUrl`='14',`TAnimalUrl`='猴',`TColor`='blue',`TAnimalTypeUrl`='ys',`TBigUrl`='0',`TDanshuangUrl`='0' WHERE `Issue` = '20170913015' [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913015' AND `State` IN ('0','1') LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `t_history` SET `State`='3' WHERE `Issue` = '20170913015' [ RunTime:0.0010s ]
+SQL: UPDATE `t_history` SET `Issue`='20170913016',`Time`='1505242219',`Num`='牛--猪--羊--牛--鸡--羊--蛇:45--23--03--21--01--27--17',`TNumUrl`='17',`TAnimalUrl`='蛇',`TColor`='green',`TAnimalTypeUrl`='ys',`TBigUrl`='0',`TDanshuangUrl`='1' WHERE `Issue` = '20170913016' [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913016' AND `State` IN ('0','1') LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `t_history` SET `State`='3' WHERE `Issue` = '20170913016' [ RunTime:0.0000s ]
+SQL: UPDATE `t_history` SET `Issue`='20170913017',`Time`='1505242219',`Num`='虎--蛇--龙--蛇--龙--鸡--狗:08--29--06--41--30--25--24',`TNumUrl`='24',`TAnimalUrl`='狗',`TColor`='red',`TAnimalTypeUrl`='jq',`TBigUrl`='0',`TDanshuangUrl`='0' WHERE `Issue` = '20170913017' [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913017' AND `State` IN ('0','1') LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `t_history` SET `State`='3' WHERE `Issue` = '20170913017' [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_history` WHERE `Issue` = '20170913018' AND `State` IN ('0','1') LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `t_history` SET `State`='1' WHERE `Issue` = '20170913018' [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T02:50:21+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T02:50:21+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T02:50:23+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T02:50:23+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T02:50:25+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T02:50:25+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T02:50:27+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T02:50:27+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-09-13T02:50:29+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T02:50:29+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T02:50:31+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T02:50:31+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-09-13T02:57:31+08:00 ] 192.168.0.10 /Index/auto_six
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_history` [ RunTime:0.0010s ]
+SQL: SELECT `Issue`,`IsSuperterminal`,`IsConfirm`,`State` FROM `t_history` WHERE `State` = 1 ORDER BY id desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `t_bet` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_bet` WHERE `Issue` = 20170913018 AND `Nullity` = 0  [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `t_config` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `t_config`  [ RunTime:0.0000s ]
+NOTIC: [8192] Function split() is deprecated D:\testWWW\lhc2\Application\AutoLottery\Controller\IndexController.class.php 第 36 行.
+NOTIC: [8192] Function split() is deprecated D:\testWWW\lhc2\Application\AutoLottery\Controller\IndexController.class.php 第 37 行.
+NOTIC: [2048] Only variables should be passed by reference D:\testWWW\lhc2\Application\AutoLottery\Controller\IndexController.class.php 第 37 行.
+NOTIC: [8192] Function split() is deprecated D:\testWWW\lhc2\Application\AutoLottery\Controller\IndexController.class.php 第 38 行.
+SQL: UPDATE `t_history` SET `Issue`='20170913018',`Time`='1505242651',`Num`='马--鸡--鸡--猴--兔--鸡--兔:16--49--25--02--19--37--31',`TNumUrl`='31',`TAnimalUrl`='兔',`TColor`='blue',`TAnimalTypeUrl`='ys',`TBigUrl`='1',`TDanshuangUrl`='1' WHERE `Issue` = 20170913018 [ RunTime:0.0000s ]
+SQL: UPDATE `t_history` SET `State`='2' WHERE ( Issue=20170913018 ) [ RunTime:0.0010s ]
+SQL: UPDATE `t_history` SET `State`='1' WHERE ( Issue=20170913019 ) [ RunTime:0.0000s ]
+
+[ 2017-09-13T02:57:31+08:00 ] 192.168.0.10 /Index/auto_account
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+

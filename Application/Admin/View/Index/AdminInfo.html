@@ -1,0 +1,86 @@
+<extend name="./Application/Admin/View/layout.html" />
+
+<block name="content">
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            个人面板
+            <small>个人信息</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i>管理界面</a></li>
+            <li class="active">个人面板</li>
+            <li class="active">个人信息</li>
+        </ol>
+    </section>
+
+    <section class="content">
+     	<div class="row">
+     		<div class="col-md-12">
+     			<div class="box box-info">
+		            <div class="box-header with-border">
+		              <h3 class="box-title">个人信息</h3>
+		            </div>
+		            <div class="box-body">
+			            <div class="input-group">
+			                <span class="input-group-addon">用户账号：</span>
+			                <input type="text" class="form-control" placeholder="{$t_agentinfo.agentname}" readonly>
+		              	</div>
+		                <br>
+
+			            <div class="input-group">
+			                <span class="input-group-addon">用户级别： </span>
+			                <if condition="$t_agentinfo.isauth eq 1">
+			                	<input type="text" class="form-control" placeholder="总代理" readonly>
+			                <else />
+			                	<input type="text" class="form-control" placeholder="代理" readonly>
+			                </if>
+			            </div>
+			            <br>
+
+		                <div class="input-group">
+		                	<span class="input-group-addon">用户状态： </span>
+		               		<if condition="$t_agentinfo.nulltiy eq 0">
+			                	<input type="text" class="form-control" placeholder="启用" readonly>
+			                <else />
+			                	<input type="text" class="form-control" placeholder="禁用" readonly>
+			                </if>
+		              	</div>
+		              	<br>
+
+		              	<div class="input-group">
+		                	<span class="input-group-addon">账户额度： </span>
+		                	<input type="text" class="form-control" placeholder="{$t_agentinfo.summoney}" readonly>
+		              	</div>
+		              	<br>
+
+		         	    <div class="input-group">
+			                <span class="input-group-addon">可用额度： </span>
+			                <input type="text" class="form-control" placeholder="{$t_agentinfo.money}" readonly>
+		                </div>
+		                <br>
+						
+						<div class="input-group">
+			                <span class="input-group-addon">抽水点数： </span>
+			                <input type="text" class="form-control" placeholder="{$t_agentinfo.proportion}%" readonly>
+		                </div>
+		                <br>
+		              <!-- /input-group -->
+		            </div>
+		            <div class="box-footer">
+                		<button type="submit" class="btn btn-primary">刷新个人信息</button>
+              		</div>
+            <!-- /.box-body -->
+         		</div>
+         		<!-- /.box-info -->
+     		</div>	
+     	</div>
+    </section>
+</div>
+</block>
+
+
+<block name="script">
+
+</block>

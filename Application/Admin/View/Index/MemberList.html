@@ -1,0 +1,693 @@
+<extend name="./Application/Admin/View/layout.html" />
+<block name="css">
+<load href="__PUBLIC__/admin/bootstrap/css/bootstrap-switch.css" />
+<style type="text/css">
+    .modal-dialog {
+        width: 540px;
+        margin: 225px auto;
+    }
+</style>
+</block>
+<block name="content">
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            会员管理
+            <small>会员列表</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i>管理界面</a></li>
+            <li class="active">会员管理</li>
+            <li class="active">会员列表</li>
+        </ol>
+    </section>
+
+    <section class="content">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">会员列表</h3>
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div id="example1_filter" class="dataTables_filter">
+                                    <input id="proxy_money" type="hidden" value="{$t_money}">
+                                    <input id="proxy_summoney" type="hidden" value="{$t_summoney}">
+                                    <button name="add_member" onclick="add_member(this, 'open_model')" class="btn btn-info" data-toggle="modal" data-target="#addMember"><i class="fa fa-plus-square"></i> 新增会员</button>
+                                    <button onclick="window.location.reload()" class="btn btn-success"><i class="fa fa-repeat"></i> 刷新数据</button>
+                                </div>
+                            </div>
+                        </div>
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>id</th>
+                                    <th>会员账号</th>
+                                    <th>会员额度</th>
+                                    <th>会员余额</th>
+                                    <th>结算金额</th>
+                                    <th>会员占成</th>
+                                    <th>会员返水</th>
+                                    <th>会员备注</th>
+                                    <th>代理状态</th>
+                                    <th>代理操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <volist name="t_userlist" id="list" key="id">
+                                <tr>
+	                               	<td>{$id}</td>
+	                               	<td id="t_id-{$id}">{$list.username}</td>
+	                               	<td id="t_summoney-{$id}">{$list.summoney}</td>
+	                               	<td id="t_money-{$id}">{$list.money}</td>
+	                               	<td id="t_settlemoney-{$id}">{$list.total}</td>
+	                               	<td>{$list.zc}%</td>
+	                               	<td>{$list.fs}%</td>
+	                               	<td>{$list.remark}</td>
+	                               	<td>
+                                        <if condition="$list.nullity eq 0">
+                               	            <input id="checkbox-{$list.userid}" name="my-checkbox" type="checkbox" checked="checked" data-size="mini" value="{$list.userid}" data-index="{$list.userid}" data-on-text="启用" data-off-text="禁用">
+                                        <else />
+                                            <input id="checkbox-{$list.userid}" name="my-checkbox" type="checkbox" data-size="mini" value="{$list.userid}" data-index="{$list.userid}" data-on-text="启用" data-off-text="禁用">
+                                        </if>
+									</td>
+	                               	<td>
+                                        <button name="edit_user" onclick="edit_member(this, 'open_model', {$id},  {$list.userid})" class="btn btn-primary" data-toggle="modal" data-target="#EditMember"><i class="fa fa-edit"></i>修改</button>
+                                        <button name="recharge_user" onclick="recharge_member(this, 'open_model', {$id}, {$list.userid})" class="btn btn-primary" data-toggle="modal" data-target="#RechargeMember"><i class="fa fa-angle-up"></i>充值</button>
+                                        <button name="reduce_user" onclick="reduce_member(this, 'open_model', {$id}, {$list.userid})" class="btn btn-primary" data-toggle="modal" data-target="#ReduceMember"><i class="fa fa-angle-down"></i>降额</button>
+                                        <button name="settle_user" onclick="settle_member(this, 'open_model', {$id}, {$list.userid})" class="btn btn-primary" data-toggle="modal" data-target="#SettleMember"><i class="fa fa-yen"></i>结算</button>
+                                        <button name="{$list.order_id}" onclick="takemoney_member(this, 'open_model', {$id}, {$list.userid})" class="btn btn-primary" data-toggle="modal" data-target="#TakeMoneyMember"><i class="fa fa-yen"></i>提现</button>
+                                        <button name="{$list.order_id}" onclick="delete_member(this, 'open_model', {$id}, {$list.userid})" class="btn btn-primary" data-toggle="modal" data-target="#DeleteMember"><i class="fa fa-yen"></i>删除</button>
+                                    </td>
+                                </tr>
+                            </volist>
+                            </tbody>
+                        </table>
+
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">
+                                    总共有 {$count} 条数据
+                                </div>
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
+                                </div>
+                                <ul class="pagination">
+                                    {$page}
+                                </ul>
+                            </div>
+                        </div>                  
+                    </div>
+                </div>
+            </div>
+            <!-- /.col -->
+          </div>
+          <!-- /.row -->
+    </section><!-- /.content -->
+
+
+    <!-- addMember Modal -->
+        <div class="modal fade" id="addMember" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">新增会员</h4>
+              </div>
+            <form>
+            <div class="modal-body">
+                <div class="input-group">
+                    <span class="input-group-addon">可用额度： </span>
+                    <input id="add_proxy_money" name="add_proxy_money" type="text" class="form-control" placeholder="" readonly>
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">会员账号：  </span>
+                    <input id="add_member_name" name="add_member_name" type="text" class="form-control" placeholder="会员账号(最好使用英文或者数字, 长度在20以内)">
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">会员密码：  </span>
+                    <input id="add_member_pwd" name="add_member_pwd" type="password" class="form-control" placeholder="请输入新密码(最好使用英文或者数字, 长度在20以内)">
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">确认密码：  </span>
+                    <input id="add_confirm_pwd" name="add_confirm_pwd" type="password" class="form-control" placeholder="再次输入新密码确认">
+                </div>
+                <br>
+                
+                <div class="input-group">
+                    <span class="input-group-addon">会员额度：  </span>
+                    <input id="add_member_money" name="add_member_money" type="text" class="form-control" placeholder="¥">
+                </div>
+                <br>
+				
+				<div class="input-group">
+                    <span class="input-group-addon">会员返水：  </span>
+                    <input id="add_member_fs" name="add_member_fs" type="text" class="form-control" placeholder="比例为1-100数值(超过100默认100)">
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">会员占成：  </span>
+                    <input id="add_member_zc" name="add_member_zc" type="text" class="form-control" placeholder="比例为1-100数值(超过100默认100)">
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">备注信息：  </span>
+                    <input id="add_remark" name="add_remark" type="text" class="form-control" placeholder="备注信息">
+                </div>
+                <br>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="add_member(this, 'add_member')">添加</button>
+                <button type="reset" class="btn btn-default">重置</button>
+            </div>
+            </form>
+            </div>
+          </div>
+        </div>
+    <!--/. addMember Model-->
+
+    <!-- EditMember Modal -->
+        <div class="modal fade" id="EditMember" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">修改会员(留空的则默认原值)</h4>
+              </div>
+            <form>
+            <div class="modal-body">
+                <div class="input-group">
+                    <span class="input-group-addon">当前额度：  </span>
+                    <input id="edit_proxy_summoney" name="edit_proxy_summoney" type="text" class="form-control" placeholder="" readonly>
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon">会员账号：  </span>
+                    <input id="edit_member_id" name="edit_member_id" type="hidden" class="form-control" placeholder="" readonly>
+                    <input id="edit_member_name" name="edit_member_name" type="text" class="form-control" placeholder="会员账户" readonly>
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">会员密码：  </span>
+                    <input id="edit_member_pwd" name="edit_member_pwd" type="password" class="form-control" placeholder="请输入密码(如果放空则不修改原密码)">
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">确认密码：  </span>
+                    <input id="edit_confirm_pwd" name="edit_confirm_pwd" type="password" class="form-control" placeholder="再次输入新密码确认">
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">会员额度：  </span>
+                    <input id="edit_member_summoney" name="edit_member_summoney" type="number" class="form-control" placeholder="代理额度">
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">会员占成：  </span>
+                    <input id="edit_member_zc" name="edit_member_zc" type="number" class="form-control" placeholder="比例为1-100数值(超过100默认100)">
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">会员返水：  </span>
+                    <input id="edit_member_fs" name="edit_member_fs" type="number" class="form-control" placeholder="比例1-100数值(超过100默认100)">
+                </div>
+                <br>
+                
+
+                <div class="input-group">
+                    <span class="input-group-addon">备注信息：  </span>
+                    <input id="edit_remark" name="edit_remark" type="text" class="form-control" placeholder="备注信息">
+                </div>
+                <br>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="edit_member(this,'edit_member')">修改</button>
+                <button type="reset" class="btn btn-default">重置</button>
+            </div>
+            </form>
+            </div>
+          </div>
+        </div>
+    <!--/. EditMember Model-->
+
+    <!-- RechargeMember Modal -->
+        <div class="modal fade" id="RechargeMember" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">充值会员</h4>
+              </div>
+            <form>
+            <div class="modal-body">
+                <div class="input-group">
+                    <span class="input-group-addon">可充余额：  </span>
+                    <input id="recharge_proxy_money" name="recharge_proxy_money" type="text" class="form-control" placeholder="" readonly>
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">会员账号：  </span>
+                    <input id="recharge_member_id" name="recharge_member_id" type="hidden" class="form-control" placeholder="" readonly>
+                    <input id="recharge_member_name" name="recharge_member_name" type="text" class="form-control" placeholder="" readonly>
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">会员额度：  </span>
+                    <input id="recharge_member_summoney" name="recharge_member_summoney" type="text" class="form-control" placeholder="" readonly>
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">会员余额：  </span>
+                    <input id="recharge_member_money" name="recharge_member_money" type="text" class="form-control" placeholder="" readonly>
+                </div>
+                <br/>
+
+                <div class="input-group">
+                    <span class="input-group-addon">充值额度：  </span>
+                    <input id="recharge_member_addmoney" name="recharge_member_addmoney" type="text" class="form-control" placeholder="¥">
+                </div>
+                <br>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="recharge_member(this, 'recharge_member')">充值</button>
+                <button type="reset" class="btn btn-default">重置</button>
+            </div>
+            </form>
+            </div>
+          </div>
+        </div>
+    <!--/. RechargeMember Model-->
+
+    <!-- ReduceMember Modal -->
+        <div class="modal fade" id="ReduceMember" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">降额会员</h4>
+              </div>
+            <form>
+            <div class="modal-body">
+                <div class="input-group">
+                    <span class="input-group-addon">会员账户：  </span>
+                    <input id="reduce_member_name" name="reduce_member_name" type="text" class="form-control" placeholder="" readonly>
+                    <input id="reduce_member_id" name="reduce_member_id" type="hidden" class="form-control" placeholder="" readonly>
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">会员额度：  </span>
+                    <input id="reduce_member_summoney" name="reduce_member_summoney" type="text" class="form-control" placeholder="" readonly>
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">会员余额：  </span>
+                    <input id="reduce_member_money" name="reduce_member_money" type="text" class="form-control" placeholder="" readonly>
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">降额额度：  </span>
+                    <input id="reduce_member_reducemoney" name="reduce_member_reducemoney" type="text" class="form-control" placeholder="¥">
+                </div>
+                <br>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="reduce_member(this, 'reduce_member')">降额</button>
+                <button type="reset" class="btn btn-default">重置</button>
+            </div>
+            </form>
+            </div>
+          </div>
+        </div>
+    <!--/. ReduceMember Model-->
+
+    <!-- SettleMember Modal -->
+        <div class="modal fade" id="SettleMember" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">结算会员</h4>
+              </div>
+            <form>
+            <div class="modal-body">
+                <div class="input-group">
+                    <span class="input-group-addon">会员账户：  </span>
+                    <input id="settle_member_name" name="settle_member_name" type="text" class="form-control" placeholder="" readonly>
+                    <input id="settle_member_id" name="settle_member_id" type="hidden" class="form-control" placeholder="" readonly>
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">会员额度：  </span>
+                    <input id="settle_member_summoney" name="settle_member_summoney" type="text" class="form-control" placeholder="" readonly>
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">会员余额：  </span>
+                    <input id="settle_member_money" name="settle_member_money" type="text" class="form-control" placeholder="" readonly>
+                </div>
+                <br>
+
+                <div class="input-group">
+                    <span class="input-group-addon">结算金额：  </span>
+                    <input id="settle_member_settlemoney" name="settle_member_settlemoney" type="text" class="form-control" placeholder="¥" readonly>
+                    <input id="settle_member_hiddenmoney" name="settle_member_hiddenmoney" type="hidden" class="form-control" placeholder="¥" readonly>
+                </div>
+                <br>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="settle_member(this, 'settle_member')">结算</button>
+                <button type="reset" class="btn btn-default">重置</button>
+            </div>
+            </form>
+            </div>
+          </div>
+        </div>
+    <!--/. SettleProxy Model-->
+
+    <!-- TakeMoneyMember Modal -->
+        <div class="modal fade" id="TakeMoneyMember" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">提现会员</h4>
+              </div>
+            <form>
+            <div class="modal-body">
+                <div class="input-group">
+                    <span class="input-group-addon">会员账户：  </span>
+                    <input id="take_member_name" name="take_member_name" type="text" class="form-control" placeholder="" readonly>
+                    <input id="take_member_id" name="take_member_id" type="hidden" class="form-control" placeholder="" readonly>
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon">会员余额：  </span>
+                    <input id="take_member_money" name="take_member_money" type="text" class="form-control" readonly>
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon">结算金额：  </span>
+                    <input id="take_member_settlemoney" name="take_member_settlemoney" type="number" class="form-control" readonly>
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon">提现金额：  </span>
+                    <input id="take_member_takemoney" name="take_member_takemoney" type="number" class="form-control" placeholder="¥">
+                </div>
+                <br>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="takemoney_member(this, 'takemoney_member')">提现</button>
+                <button type="reset" class="btn btn-default">重置</button>
+            </div>
+            </form>
+            </div>
+          </div>
+        </div>
+    <!--/. TakeMoneyMember Model-->
+
+     <!-- DeleteMember Modal -->
+        <div class="modal fade" id="DeleteMember" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">删除代理</h4>
+              </div>
+            <form>
+            <div class="modal-body">
+                <div class="input-group">
+                    <span class="input-group-addon">确认密码：  </span>
+                    <input id="delete_member_pwd" name="delete_member_pwd" type="password" class="form-control" placeholder="代理密码">
+                    <input id="delete_member_id" name="delete_member_id" type="hidden" class="form-control" placeholder="" readonly>
+                </div>
+                <br>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="delete_member(this, 'delete_member')">删除</button>
+                <button type="reset" class="btn btn-default">重置</button>
+            </div>
+            </form>
+            </div>
+          </div>
+        </div>
+    <!--/. DeleteMember Model-->
+</div>
+</block>
+
+
+<block name="script">
+<load href="__PUBLIC__/admin/bootstrap/js/bootstrap-switch.min.js" />
+
+<script>
+	$("[name='my-checkbox']").bootstrapSwitch();
+</script>
+
+<script>
+
+$(function() {
+    $("[name='my-checkbox']").on('switchChange.bootstrapSwitch', function (e, cbool) {
+        var state = 1;
+        var status = "禁用";
+        if(cbool) {
+            var state = 0;
+            var status = "启用";
+        }
+        var bool = confirm("是否确认" + status);
+        var data = {};
+        if(bool) {
+            data.state = state;
+            data.t_id = $(e.target).attr('data-index');
+            ajax_data(data, "{:U('Member/switch_member')}", cbool, this);
+        } else {
+            $(this).bootstrapSwitch('state', !cbool, true)
+        }
+    });
+})
+
+//删除会员
+function delete_member(obj, str, id, t_id) {
+    if(str == "delete_member") {
+            if("" != $("#delete_member_pwd").val()) {
+                var data = {
+                    "action" : "delete",
+                    "t_id": $("#delete_member_id").val(),
+                    "member_pwd": $("#delete_member_pwd").val(),
+                }
+                ajax_data(data, "{:U('Member/delete_member')}");
+            } else {
+                alert("确认密码不能为空");
+            }     
+       
+    } 
+    if(str == "open_model") {
+        $("#delete_member_id").val(t_id);
+    }
+}
+
+//会员提现
+function takemoney_member(obj, str, id, t_id) {
+    if(str == "takemoney_member") {
+            if(0 <= parseFloat($("#take_member_settlemoney").val())) {
+                var data = {
+                    "action" : "take",
+                    "t_id": $("#take_member_id").val(),
+                    "member_name": $("#take_member_name").val(),
+                    "member_takemoney": $("#take_member_takemoney").val(),
+                }
+                ajax_data(data, "{:U('Member/takemoney_member')}");
+            } else {
+                alert("金额不足提现");
+            }
+            
+       
+    } 
+    if(str == "open_model") {
+        $("#take_member_name").val($("#t_id-"+id).text());
+        $("#take_member_id").val(t_id);
+        $("#take_member_money").val($("#t_money-"+id).text());
+        $("#take_member_settlemoney").val($("#t_settlemoney-"+id).text());
+    }
+} 
+
+
+//会员结算
+function settle_member(obj, str, id, t_id) {
+    if(str == "settle_member") {
+
+        var data = {
+            "action" : "settle",
+            "t_id": $("#settle_member_id").val(),
+            "member_name": $("#settle_member_name").val(),
+        }
+        ajax_data(data, "{:U('Member/settle_member')}");
+    } 
+    if(str == "open_model") {
+        $("#settle_member_name").val($("#t_id-"+id).text());
+        $("#settle_member_id").val(t_id);
+        $("#settle_member_summoney").val($("#t_summoney-"+id).text());
+        $("#settle_member_money").val($("#t_money-"+id).text());
+        $("#settle_member_settlemoney").val($("#t_settlemoney-"+id).text());
+        $("#settle_member_hiddenmoney").val($("#t_settlemoney-"+id).text());
+    }
+}
+
+//会员降额
+function reduce_member(obj, str, id, t_id) {
+    if(str == "reduce_member") {
+        if(parseFloat($("#reduce_member_money").val()) >= parseFloat($("#reduce_member_reducemoney").val())) {
+            var data = {
+                "action" : "reduce",
+                "t_id": $("#reduce_member_id").val(),
+                "member_name": $("#reduce_member_name").val(),
+                "member_reducemoney": $("#reduce_member_reducemoney").val(),
+            }
+
+            ajax_data(data, "{:U('Member/reduce_member')}");
+        } else {
+            alert("削减额度超额");
+        }
+    } 
+    if(str == "open_model") {
+        $("#reduce_member_name").val($("#t_id-"+id).text());
+        $("#reduce_member_id").val(t_id);
+        $("#reduce_member_summoney").val($("#t_summoney-"+id).text());
+        $("#reduce_member_money").val($("#t_money-"+id).text())
+    }
+}
+
+//充值会员
+function recharge_member(obj, str, id, t_id) {
+    if(str == "recharge_member") {
+        if(parseFloat($("#recharge_proxy_money").val()) >= parseFloat($("#recharge_member_addmoney").val())) {
+            var data = {
+                "action" : "recharge",
+                "t_id": $("#recharge_member_id").val(),
+                "member_name": $("#recharge_member_name").val(),
+                "member_addmoney": $("#recharge_member_addmoney").val(),
+            }
+            ajax_data(data, "{:U('Member/recharge_member')}");
+        } else {
+            alert("充值额度不足");
+        }
+    } 
+    if(str == "open_model") {
+        $("#recharge_proxy_money").val($("#proxy_money").val());
+        $("#recharge_member_name").val($("#t_id-"+id).text());
+        $("#recharge_member_id").val(t_id);
+        $("#recharge_member_summoney").val($("#t_summoney-"+id).text());
+        $("#recharge_member_money").val($("#t_money-"+id).text())
+    }
+}
+
+
+//修改会员
+function edit_member(obj, str, id, t_id) {
+    if(str == "edit_member") {
+        if($("#edit_member_pwd").val() == $("#edit_confirm_pwd").val()) {
+            var data = {
+                "action" : "edit",
+                "t_id": $("#edit_member_id").val(),
+                "member_name": $("#edit_member_name").val(),
+                "member_pwd": $("#edit_member_pwd").val(),
+                "member_remark": $("#edit_remark").val(),
+                "member_zc": $("#edit_member_zc").val(),
+                "member_fs": $("#edit_member_fs").val(),
+                "member_summoney": $("#edit_member_summoney").val()
+            }
+            ajax_data(data, "{:U('Member/edit_member')}");
+        } else {
+            alert("两次输入密码不同");
+        }
+    } 
+    if(str == "open_model") {
+        $("#edit_member_name").val($("#t_id-"+id).text());
+        $("#edit_member_id").val(t_id);
+        $("#edit_proxy_summoney").val($("#proxy_summoney").val());
+    }
+
+}
+
+
+
+//新增会员
+function add_member(obj, str) {
+    if(str == "add_member") {
+        if($("#add_member_pwd").val() == $("#add_confirm_pwd").val()) {
+            var data = {
+                "action" : "add",
+                "member_name": $("#add_member_name").val(),
+                "member_pwd": $("#add_member_pwd").val(),
+                "member_remark": $("#add_remark").val(),
+                "member_money": $("#add_member_money").val(),
+                "member_zc": $("#add_member_zc").val(),
+                "member_fs": $("#add_member_fs").val()
+            }
+            ajax_data(data, "{:U('Member/add_member')}");
+        } else {
+            alert("两次输入密码不同");
+        }
+    }
+    if(str == "open_model") {
+        $("#add_proxy_money").val($("#proxy_summoney").val());
+    }
+}
+
+//异步操作
+function ajax_data(data, url, cbool, obj) {
+    $.ajax({
+        type: 'post',
+        url: url,
+        data: data,
+        success: function (data) {
+            if(data > 0) {
+                alert('操作成功');
+                location.reload();
+            } else if (data == -1) {
+                alert('余额不足');
+            } else if (data == -2) {
+            	alert('用户名或密码不能为空')
+            } else if (data == -3) {
+            	alert("用户名重复")
+            } else if (data == -4) {
+                alert('操作失败');
+                $(obj).bootstrapSwitch('state', !cbool, true)
+            } else if (data == -6) {
+                alert('操作成功');
+            } else {
+                alert('操作失败');
+            }
+        },
+        error: function (data, status) {
+           alert('操作时出现异常')
+        }
+    });
+}
+</script>
+</block>

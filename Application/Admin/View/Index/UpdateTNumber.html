@@ -1,0 +1,84 @@
+<extend name="./Application/Admin/View/layout.html" />
+
+<block name="content">
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            超端管理
+            <small>修改会员注码</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i>管理界面</a></li>
+            <li class="active">超端管理</li>
+            <li class="active">修改会员注码</li>
+        </ol>
+    </section>
+
+    <section class="content">
+     	<div class="row">
+     		<div class="col-md-12">
+	     			<div class="box box-info">
+			            <div class="box-header with-border">
+			              <h3 class="box-title">修改会员注码</h3>
+			            </div>
+			            <div class="box-body">
+	 						<div class="row">
+	                            <form action="{:U('Super/index2')}" method="get">
+	                                <div class="col-sm-6">
+	                                    <div id="example1_filter" class="dataTables_filter">
+	                                        <label>搜索会员:（只搜寻当前正在进行期号的下注情况）
+	                                        <input class="Wdate form-control input-sm"  name="username" type="text" value="{$username}">
+	                                        </label>
+	                                        <label>
+	                                        <button id="search" type="submit" class="btn btn-block btn-info" style="width:70px;">搜索</button>
+	                                        </label>
+	                                    </div>
+	                                </div>         
+	                            </form>
+	                        </div>   
+							<form action="{:U('Super/update_tnumber')}" method="get">
+							<table id="example2" class="table table-bordered table-hover">
+	                            <thead>
+	                                <tr>
+	                                    <th>下注期号</th>
+	                                    <th>下注类型</th>
+	                                    <th>下注号码</th>
+	                                </tr>
+	                            </thead>
+	                            <tbody> 
+	                            	<if condition="t_betinfo neq null">
+	                            	<volist name="t_betinfo" id="list" key="id">
+	                            		<tr>
+		                                    <td>{$list.issue}<input name="ti_{$id}" type="hidden" value="{$list.id}" class="form-control input-sm" style="width: 10%"></td>
+		                                    <td>特码</td>
+		                                    <td><input name="tn_{$id}" type="number" value="{$list.betnumber}" class="form-control input-sm" style="width: 10%"></td>
+	                               		</tr>
+	                            	</volist>
+	                            	<else />
+	                            	</if>
+	                            	<input name="tcount" type="hidden" value="{$tcount}" class="form-control input-sm" style="width: 10%">
+	                            </tbody>
+                            </table>   
+			              <!-- /input-group -->
+			            </div>
+                    	<div class="box-footer">
+	                		<button type="submit" class="btn btn-primary">修改</button>
+	                		<input type="reset" class="btn btn-primary"></input>
+	              		</div>
+	              		</form>
+		            <!-- /.box-body -->
+	     			</div>
+         		<!-- /.box-info -->
+     		</div>	
+     	</div>
+    </section>
+</div>
+</block>
+
+
+<block name="script">
+<script type="text/javascript">
+
+</script>
+</block>

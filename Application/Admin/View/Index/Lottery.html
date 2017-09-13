@@ -1,0 +1,117 @@
+<extend name="./Application/Admin/View/layout.html" />
+
+<block name="content">
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            开奖管理
+            <small>开奖配置</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i>管理界面</a></li>
+            <li class="active">开奖管理</li>
+            <li class="active">开奖配置</li>
+        </ol>
+    </section>
+
+    <section class="content">
+    	 <!-- Small boxes (Stat box) -->
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">开奖设置</h3>
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                    	<form action="{:U('Lottery/update_config')}" method="post">
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>平码生肖赔率</th>
+                                    <th>特码号码赔率</th>
+                                    <th>特码波色赔率</th>
+                                    <th>特码大小赔率</th>
+                                    <th>特码单双赔率</th>
+                                    <th>家禽野兽赔率</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            	<tr>
+                            		<td><input name="t_config-1" type="text" value="{$t_config[0]['configvalue']}"></td>
+                            		<td><input name="t_config-2" type="text" value="{$t_config[1]['configvalue']}"></td>
+                            		<td><input name="t_config-3" type="text" value="{$t_config[2]['configvalue']}"></td>
+                            		<td><input name="t_config-4" type="text" value="{$t_config[3]['configvalue']}"></td>
+                            		<td><input name="t_config-5" type="text" value="{$t_config[4]['configvalue']}"></td>
+                            		<td><input name="t_config-6" type="text" value="{$t_config[5]['configvalue']}"></td>
+                            	</tr>
+                            	<tr>
+                            		<th>平码生肖最小投注额</th>
+                            		<th>特码生肖最小投注额</th>
+                            		<th>特码波色最小投注额</th>
+                            		<th>特码大小最小投注额</th>
+                            		<th>特码单双最小投注额</th>
+                            		<th>家禽野兽最小投注额</th>
+                            	</tr>
+                            	<tr>
+                            		<td><input name="t_config-7" type="text" value="{$t_config[6]['configvalue']}"></td>
+                            		<td><input name="t_config-8" type="text" value="{$t_config[7]['configvalue']}"></td>
+                            		<td><input name="t_config-9" type="text" value="{$t_config[8]['configvalue']}"></td>
+                            		<td><input name="t_config-10" type="text" value="{$t_config[9]['configvalue']}"></td>
+                            		<td><input name="t_config-11" type="text" value="{$t_config[10]['configvalue']}"></td>
+                            		<td><input name="t_config-12" type="text" value="{$t_config[11]['configvalue']}"></td>
+                            	</tr>
+                            </tbody>
+                        </table>  
+                        <div class="row">
+                            <div class="col-sm-5">
+								<button id="delete" name="delete" class="btn btn-primary" onclick="action(this)">提交</button>
+                            </div>
+                        </div>          
+                        </form>    
+                    </div>
+                </div>
+            </div>
+            <!-- /.col -->
+
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">奖池设置</h3>
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                        <form action="{:U('Lottery/update_Jackpot')}" method="post">
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>奖池金额</th>
+                                    <th>抽水率</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input name="t_config-15" type="text" value="{$jackpot_scale[0]['configvalue']}">
+                                    </td>
+                                    <td><input name="t_config-16" type="text" value="{$jackpot_scale[1]['configvalue']}">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>  
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <button type="submit" class="btn btn-primary">提交</button>
+                            </div>
+                        </div>          
+                        </form>    
+                    </div>
+                </div>
+            </div>
+          </div>
+          <!-- /.row -->
+    </section>
+</div>
+</block>
+
+
+<block name="script">
+</block>

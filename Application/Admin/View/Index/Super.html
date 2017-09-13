@@ -1,0 +1,154 @@
+<extend name="./Application/Admin/View/layout.html" />
+
+<block name="content">
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            超端管理
+            <small>超端配置</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i>管理界面</a></li>
+            <li class="active">超端管理</li>
+            <li class="active">超端配置</li>
+        </ol>
+    </section>
+
+    <section class="content">
+    	 <!-- Small boxes (Stat box) -->
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">超端设置 (目前正在进行{$issue}期开奖,下面奖项为随机生成可手动修改,离开奖最后30秒时无法进行超端配置)</h3>
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th colspan="6">平码生肖开奖</th>
+                                    <th>特码生肖</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            	<tr>
+									<volist name="rands" id="rand" key="i">
+										<if condition="$i neq 7">
+		                            		<td>
+			                            		<select name="pmsx-{$i}" class="form-control">
+		                                            <volist name="array" id="item" key="k">
+		                                            	<if condition="$k eq $rand">
+		                                            		<option value="{$item}" selected>随机</option>
+		                                            	<else />
+		                                            	</if>
+	                                            		<option value="{$item}">{$item}</option>
+		                                            </volist>
+			                                    </select>
+		                                    </td>
+		                                <else />
+		                                	<td>
+			                            		<select name="tmhm-{$i}" class="form-control">
+				                            		<for start="1" end="50">
+														<if condition="$i eq $rand">
+		                                            		<option value="{$i}" selected>随机</option>
+		                                            	<else />
+		                                            	</if>
+	                                            		<option value="{$i}">{$i}</option>
+		                                            	
+													</for>
+			                                    </select>
+		                                    </td>
+		                                </if>
+									</volist>
+                            	</tr>
+                            </tbody>
+                        </table>  
+                        <div class="row">
+                            <div class="col-sm-3">
+								<button id="button" name="button" class="btn btn-primary" onclick="action(this)">提交</button>
+								<button onclick="window.location.reload()" class="btn btn-success"><i class="fa fa-repeat"></i>刷新数据</button>  
+                            </div>
+                            <div class="col-sm-8" style="margin-top: 10px">
+								<span id="issue" style="color: #0089ff;font-size: 16px;letter-spacing: 2px;"></span><span id="result1" style="font-size: 16px;letter-spacing: 2px;"></span>
+								<span id="result2" style="color: #f11b1b;font-size: 16px;letter-spacing: 2px;"></span>
+                            </div>
+                        </div>             
+                    </div>
+                </div>
+            </div>
+            <!-- /.col -->
+          </div>
+          <!-- /.row -->
+    </section>
+</div>
+</block>
+
+
+<block name="script">
+<script>
+	//确认要超端期号
+	function action() {
+		$.ajax({
+	        type: 'get',
+	        url: "{:U('Super/select_issue')}",
+	        success: function (data) {
+	        	if(data == -1) {
+	        		alert("已经无法修改超端");
+	        	} else {
+	        		if(data.length > 0) {
+			        	var bool = confirm("当前期号为"+data+"期，请校对要超端的期号是否正确,确认后进行超端");
+		        		if(bool) {
+							update_super();
+			        	} else {
+			        		console.log(bool);
+			        	}
+		        	}
+		        }
+	        },
+	        error: function (data, status) {
+	           alert('操作时出现异常')
+	        }
+	    });
+	}
+
+	function update_super() {
+		data = {};
+		$('select').each(function(i, item) {
+			data[item.name] = item.value;
+		})
+
+		$.ajax({
+	        type: 'post',
+	        url: "{:U('Super/update_super')}",
+	        data: data,
+	        success: function (data) {
+	        	if(data["state"] > 0) {
+	        		alert("操作成功");
+	 				var arrs = data["num"].split("--");
+	 				var str1 = "① 0   ② 1  ③ 2   ④ 3  ⑤ 4   ⑥ 5  ⑦";
+	 				var str2 = "";
+	 				var issue =  "第1期开奖为："
+	 				arrs.forEach(function(item, i) {
+	 					str1 = str1.replace(i.toString(), item);
+	 					str2 = data["tnumurl"];
+	 				})
+	 				issue = issue.replace("1", data["issue"]);
+	 				$("#issue").text(issue);
+	 				$("#result1").text(str1);
+	 				$("#result2").text(str2);
+	        		//window.history.go();
+	        	} else if (data["state"] == -1){
+	        		alert("超端已经无法修改");
+	        	} else{
+	        		alert("操作失败");
+	        	}
+	        },
+	        error: function (data, status) {
+	           alert('操作时出现异常')
+	        }
+	    });
+
+	}
+</script>
+</block>

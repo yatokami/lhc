@@ -1,0 +1,23 @@
+html, body {margin:0; padding:0; border:0; width:100%; min-height:1000px; font-family:Arial, Verdana, Helvetica, sans-serif; font-size:85%; color:#000; line-height:140%; background:#FFF; background-repeat:repeat-x; background-position:0 89px;}
+@font-face{font-family: 'MingLiu';src:url('../img/MINGLIU.TTF');}
+#mainContainer {width:776px; font-size:105%; position:relative; margin:0 auto;}
+#header {height:73px; clear:both;}
+#logo {display:block; width:222px; height:65px; margin:5px 5px 6px 11px; background:url(../img/logo_hkjc.png) no-repeat; text-indent:-2000px; float:left;}
+#header .nav {font-size:12px; color:#848484; line-height:100%; float:right; vertical-align:bottom; margin:22px 25px 0 0; position:relative;}
+#header .nav div {float:left;}
+#topNav {margin:20px 5px 0 0;}
+#topNav a {color:#848484; padding:5px 0 0 0; display:inline-block;}
+#topNav a.lang {color:#2A3981; padding:0 0 0 10px; margin:0 10px 0 10px; border-left:1px solid #2A3981; height:13px; font-size:11px;}
+#topNav #globalLoginControl {position:relative;}
+#topNav #globalLoginControl a.login {color:#2A3981; font-weight:700; padding:0 0 0 10px; margin:0 0 0 5px; border-left:1px solid #2A3981;}
+#topNav {line-height:14px;}
+#topNav input {width:75px; height:14px; color:#868686;}
+#topNav input.iconToggle {width:16px; height:17px; margin:0px 0 0 0; line-height:14px;}
+#topNav a.login {color:#2A3981; font-weight:700; padding:0 0 0 10px; margin:0 0 0 5px; border-left:1px solid #2A3981;}
+#topNav #globalLoginControl a.faq {color:#848484; padding:0 0 0 10px; margin:0 0 0 5px; border-left:1px solid #2A3981;}
+#topNav a.logout {padding-bottom:2px;}
+#topNav a.help {padding:0;}
+#topNav a.help img {margin:0 5px;}
+#ewinContainer {background:url(../img/icon_ewin.gif) no-repeat 0 1px; padding:0 0 0 45px; height:45px; position:relative;}
+#ewinContainer a {display:block; background:url(../img/arrow_1.gif) no-repeat 0 4px; padding:0 0 0 9px; color:#7B7135; line-height:120%;}
+#ewinContainer .ewin {position:absolute; width:39px; height:45px; left:0; top:0; padding:0; background:none;}

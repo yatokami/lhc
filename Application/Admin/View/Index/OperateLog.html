@@ -1,0 +1,106 @@
+<extend name="./Application/Admin/View/layout.html" />
+
+<block name="content">
+<div class="content-wrapper">
+<!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            代理管理
+            <small>操作日志</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i>管理界面</a></li>
+            <li class="active">代理管理</li>
+            <li class="active">操作日志</li>
+        </ol>
+    </section>
+    
+     <section class="content">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">操作列表</h3>
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="row">
+                            <form action="{:U('Proxy/operate_log')}" method="get">
+                                <div class="col-sm-6">
+                                    <div id="example1_filter" class="dataTables_filter">
+                                        <label>根据用户查询:
+                                        <select name="operate_type" class="form-control">
+                                            <option value="0" selected>全部</option>
+                                            <option value="1">新增代理</option>
+                                            <option value="2">充值代理</option>
+                                            <option value="3">降额代理</option>
+                                            <option value="4">结算代理</option>
+                                            <option value="5">提现代理</option>
+                                        </select>
+                                        </label>
+                                        <label>搜索代理:<input id="searchtxt2" name="search_id" type="search" class="form-control input-sm" aria-controls="example1" placeholder="请输入代理账号"></label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-1">
+                                    <div id="example1_filter" class="dataTables_filter">
+                                        <button id="search" type="submit" class="btn btn-block btn-info" style="width:70px;">查询</button>   
+                                    </div>
+                                </div>           
+                            </form>
+                                <div class="col-sm-1">
+                                    <div id="example1_filter" class="dataTables_filter">
+                                        <button onclick="window.location.reload()" class="btn btn-success"><i class="fa fa-repeat"></i>刷新数据</button>  
+                                    </div>
+                                </div>
+                        </div>
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>id</th>
+                                    <th>操作代理</th>
+                                    <th>操作类型</th>
+                                    <th>操作额度</th>
+                                    <th>操作时间</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <volist name="page_log" id="list" key="id">
+                                <tr>
+                                    <td>{$id}</td>
+                                    <td>{$list.operateusername}</td>
+                                    <td>{$list.operatetype}</td>
+                                    <td>{$list.operatemoney}</td>
+                                    <td>{$list.time|date='Y-m-d H:i:s',###}</td>
+                                </tr>
+                            </volist>
+                            </tbody>
+                        </table>
+
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">
+                                    总共有 {$count} 条数据
+                                </div>
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
+                                </div>
+                                <ul class="pagination">
+                                    {$page}
+                                </ul>
+                            </div>
+                        </div>                  
+                    </div>
+                </div>
+            </div>
+            <!-- /.col -->
+          </div>
+          <!-- /.row -->
+    </section><!-- /.content -->
+</div>
+</block>
+
+
+<block name="script">
+
+</block>

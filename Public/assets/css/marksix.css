@@ -1,0 +1,155 @@
+A {
+	COLOR: #cc2c2c; TEXT-DECORATION: none
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+.title {
+	FONT-SIZE: 12px; COLOR: #cc2b30; LINE-HEIGHT: 15px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.topTitleBar {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; COLOR: #ffffff; LINE-HEIGHT: 15px; PADDING-TOP: 0px; BORDER-BOTTOM: #cc2c2c 3px solid; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; HEIGHT: 30px; BACKGROUND-COLOR: #ffffff
+}
+.topTitleBar2 {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; COLOR: #ffffff; LINE-HEIGHT: 15px; PADDING-TOP: 0px; BORDER-BOTTOM: #eda11e 3px solid; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; HEIGHT: 30px; BACKGROUND-COLOR: #ffffff
+}
+.titleBar {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 10px; FONT-SIZE: 12px; PADDING-BOTTOM: 5px; COLOR: #ffffff; LINE-HEIGHT: 15px; PADDING-TOP: 5px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; BACKGROUND-COLOR: #4a8cc1
+}
+.subTitleBar {
+	PADDING-RIGHT: 7px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 10px; FONT-SIZE: 12px; PADDING-BOTTOM: 3px; COLOR: #333333; LINE-HEIGHT: 15px; PADDING-TOP: 3px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; BACKGROUND-COLOR: #de5451
+}
+.tdColor1 {
+	PADDING-RIGHT: 1px; PADDING-LEFT: 1px; FONT-SIZE: 12px; PADDING-BOTTOM: 1px; COLOR: #ffffff; LINE-HEIGHT: 15px; PADDING-TOP: 1px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; BACKGROUND-COLOR: #4a8cc1
+}
+.tdColor2 {
+	PADDING-RIGHT: 1px; PADDING-LEFT: 1px; FONT-SIZE: 12px; PADDING-BOTTOM: 1px; COLOR: #333333; LINE-HEIGHT: 15px; PADDING-TOP: 1px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; BACKGROUND-COLOR: #dbe8f3
+}
+#mainTable {
+	BORDER-BOTTOM: #cc2c2c 3px solid
+}
+.pulldownTxt {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 3px; WIDTH: 100%; COLOR: #333333; LINE-HEIGHT: 15px; PADDING-TOP: 3px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.pulldownTxt:hover {
+	COLOR: #cc2c2c; TEXT-DECORATION: none
+}
+.leftNav {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 7px; COLOR: #333333; LINE-HEIGHT: 15px; PADDING-TOP: 7px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.leftNav:hover {
+	FONT-WEIGHT: bold; COLOR: #cc2b30; TEXT-DECORATION: none
+}
+.leftNavOver {
+	FONT-WEIGHT: bold; COLOR: #cc2b30; TEXT-DECORATION: none
+}
+.leftNavOver:hover {
+	TEXT-DECORATION: none
+}
+.leftBg {
+	BACKGROUND-COLOR: #fae6e5
+}
+.highlightBrown {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; FONT-SIZE: 11px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: 0px; COLOR: #ffffff; LINE-HEIGHT: 14px; PADDING-TOP: 0px; BORDER-BOTTOM: 0px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; BACKGROUND-COLOR: #c87c28
+}
+.highlightGreen {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; FONT-SIZE: 11px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: 0px; COLOR: #ffffff; LINE-HEIGHT: 14px; PADDING-TOP: 0px; BORDER-BOTTOM: 0px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; BACKGROUND-COLOR: #00cc00; TEXT-ALIGN: center
+}
+.highlightRed {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; FONT-SIZE: 11px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: 0px; COLOR: #ffffff; LINE-HEIGHT: 14px; PADDING-TOP: 0px; BORDER-BOTTOM: 0px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; BACKGROUND-COLOR: #ff0033
+}
+.tdColor11 {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; FONT-SIZE: 12px; PADDING-BOTTOM: 9px; VERTICAL-ALIGN: middle; COLOR: #ffffff; LINE-HEIGHT: 14px; PADDING-TOP: 9px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; BACKGROUND-COLOR: #f0f0f0
+}
+.tdColor21 {
+	PADDING-RIGHT: 1px; PADDING-LEFT: 1px; FONT-SIZE: 10px; PADDING-BOTTOM: 3px; VERTICAL-ALIGN: middle; COLOR: #333333; LINE-HEIGHT: 14px; PADDING-TOP: 3px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; BACKGROUND-COLOR: #ffffff
+}
+.tdColorHead {
+	PADDING-RIGHT: 1px; PADDING-LEFT: 1px; FONT-SIZE: 11px; PADDING-BOTTOM: 3px; COLOR: #333333; LINE-HEIGHT: 14px; PADDING-TOP: 3px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; BACKGROUND-COLOR: #dbe8f3
+}
+.snowball1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #cc0000; LINE-HEIGHT: 20px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.snowball2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 20px; COLOR: #cc0000; LINE-HEIGHT: 20px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.orangeNum1 {
+	FONT-SIZE: 12px; COLOR: #fd5200; LINE-HEIGHT: 15px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.orangeNum2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 15px; COLOR: #fd5200; LINE-HEIGHT: 15px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.statNum1 {
+	FONT-SIZE: 11px; COLOR: #003b7f; LINE-HEIGHT: 15px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.statNum2 {
+	FONT-SIZE: 11px; COLOR: #820919; LINE-HEIGHT: 15px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.orange {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; COLOR: #ffffff; LINE-HEIGHT: 15px; PADDING-TOP: 0px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; HEIGHT: 30px; BACKGROUND-COLOR: #eda11e
+}
+.redTitle {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; COLOR: #ffffff; LINE-HEIGHT: 15px; PADDING-TOP: 0px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; HEIGHT: 30px; BACKGROUND-COLOR: #cc2c2c
+}
+.toolbarBg {
+	BACKGROUND-COLOR: #f5cdcd;
+	border:1px solid red;
+	margin: 5px 0px;
+}
+.toolbarLine {
+	PADDING-RIGHT: 0px; BORDER-TOP: #d73834 1px solid; PADDING-LEFT: 0px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BORDER-BOTTOM: #d73834 1px solid
+}
+.toolbarTxt {
+	FONT-SIZE: 12px; COLOR: #333333; LINE-HEIGHT: 15px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.toolbarTxt:hover, .toolbarTxt.hovered {
+	COLOR: #cc2c2c; TEXT-DECORATION: none
+}
+.toolbarTxtOn {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #cc2c2c; LINE-HEIGHT: 15px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.toolbarTxtOn:hover {
+	TEXT-DECORATION: none
+}
+.toolbarPulldown {
+	BORDER-RIGHT: #d73834 2px solid; PADDING-RIGHT: 0px; BORDER-TOP: #d73834 2px solid; PADDING-LEFT: 8px; PADDING-BOTTOM: 8px; BORDER-LEFT: #d73834 2px solid; PADDING-TOP: 8px; BORDER-BOTTOM: #d73834 2px solid; BACKGROUND-COLOR: #f6dddd
+}
+.tableResult1 {
+	BORDER-RIGHT: #ffffff 1px solid; PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 12px; PADDING-BOTTOM: 3px; COLOR: #333333; LINE-HEIGHT: 15px; PADDING-TOP: 3px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none
+}
+.tableResult2 {
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	line-height: 15px;
+	text-decoration: none;
+	border-right:#FFFFFF 1px solid;
+	padding:3px 5px 3px 5px;
+}
+.allBallRow1 {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 0px; PADDING-BOTTOM: 6px; PADDING-TOP: 0px
+}
+.allBallColLast {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 6px; PADDING-TOP: 0px
+}
+.allBallRowLast {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.multipleBall {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; PADDING-BOTTOM: 0px; PADDING-TOP: 3px
+}
+.calendar1 {
+	BORDER-RIGHT: #d7d7d7 1px solid; BORDER-TOP: #d7d7d7 1px solid; FONT-SIZE: 11px; BORDER-LEFT: #d7d7d7 1px solid; WIDTH: 36px; COLOR: #333333; BORDER-BOTTOM: #d7d7d7 1px solid; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; HEIGHT: 25px; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none
+}
+.calendar2 {
+	BORDER-RIGHT: #fae6e5 1px solid; BORDER-TOP: #fae6e5 1px solid; FONT-SIZE: 11px; BORDER-LEFT: #fae6e5 1px solid; WIDTH: 36px; COLOR: #333333; BORDER-BOTTOM: #fae6e5 1px solid; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; HEIGHT: 25px; BACKGROUND-COLOR: #fae6e5; TEXT-DECORATION: none
+}
+.snowballDay {
+	BACKGROUND: url(/marksix/info/images/bg_snowball.gif) no-repeat center 50%; WIDTH: 36px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; HEIGHT: 25px; TEXT-DECORATION: none
+}
+.snowballStart1 {
+	BORDER-RIGHT: #d7d7d7 1px solid; BORDER-TOP: #d7d7d7 1px solid; FONT-SIZE: 11px; BACKGROUND: url(/marksix/info/images/icon_snowball_start.gif) #ffffff no-repeat right top; BORDER-LEFT: #d7d7d7 1px solid; WIDTH: 36px; COLOR: #333333; BORDER-BOTTOM: #d7d7d7 1px solid; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; HEIGHT: 25px; TEXT-DECORATION: none
+}
+.snowballStart2 {
+	BORDER-RIGHT: #fae6e5 1px solid; BORDER-TOP: #fae6e5 1px solid; FONT-SIZE: 11px; BACKGROUND: url(/marksix/info/images/icon_snowball_start.gif) #fae6e5 no-repeat right top; BORDER-LEFT: #fae6e5 1px solid; WIDTH: 36px; COLOR: #333333; BORDER-BOTTOM: #fae6e5 1px solid; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; HEIGHT: 25px; TEXT-DECORATION: none
+}
